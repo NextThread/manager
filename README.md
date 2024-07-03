@@ -16,31 +16,44 @@ The AI Scrum Master/Project Manager is a virtual assistant designed to join and 
 **Features**
 
 _Meeting Integration_: Joins meetings on Google Meet, Skype, and Microsoft Teams.
+
 _Audio Capture_: Records audio from meetings.
+
 _Speech-to-Text Conversion_: Transcribes audio to text.
+
 _NLP Analysis_: Extracts key points, action items, and decisions from transcriptions.
+
 _Summarization_: Provides concise meeting summaries.
+
 _Project Management Integration_: Creates and manages tasks in tools like Jira and GitHub.
+
 _User Interface_: User-friendly interface for accessing meeting summaries and managing tasks.
+
 
 
 **Future Enhancements**
 
 _Real-time Transcription_: Implement real-time transcription during meetings.
+
 _Voice Commands_: Enable interaction with the bot using voice commands.
+
 _Multi-language Support_: Add support for multiple languages.
+
 _Sentiment Analysis_: Analyze the sentiment of discussions to gauge team morale.
 
 
 **FAQs**
 
 _How accurate is the speech-to-text conversion?_
+
 The accuracy depends on the chosen speech-to-text service and the quality of the audio. It's recommended to use high-quality microphones and ensure a quiet environment for best results.
 
 _How is data privacy ensured?_
+
 All captured data is encrypted and stored securely. Access is restricted to authorized users only. Ensure compliance with relevant data protection regulations.
 
 _Can the bot handle multiple meetings simultaneously?_
+
 Yes, the system is designed to scale and handle multiple meetings simultaneously
 
 Contribution Guide
