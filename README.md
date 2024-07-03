@@ -1,19 +1,23 @@
 AI (Project) Manager
 
+_______________________________________
 Table of Contents
+_______________________________________
 
 1. **Introduction**
 2. **Features**
 11. **Future Enhancements**
 12. **FAQs**
 
-
+_______________________________________
 **Introduction**
+_______________________________________
 
 The AI Scrum Master/Project Manager is a virtual assistant designed to join and manage your online meetings, capture all conversations, transcribe them into text, and integrate with project management tools to create and assign tasks automatically. This document provides a comprehensive guide to setting up, using, and developing the AI (Project) Manager.
 
-
+_______________________________________
 **Features**
+_______________________________________
 
 _Meeting Integration_: Joins meetings on Google Meet, Skype, and Microsoft Teams.
 
@@ -30,8 +34,9 @@ _Project Management Integration_: Creates and manages tasks in tools like Jira a
 _User Interface_: User-friendly interface for accessing meeting summaries and managing tasks.
 
 
-
+_______________________________________
 **Future Enhancements**
+_______________________________________
 
 _Real-time Transcription_: Implement real-time transcription during meetings.
 
@@ -41,8 +46,9 @@ _Multi-language Support_: Add support for multiple languages.
 
 _Sentiment Analysis_: Analyze the sentiment of discussions to gauge team morale.
 
-
+_______________________________________
 **FAQs**
+_______________________________________
 
 _How accurate is the speech-to-text conversion?_
 
@@ -56,7 +62,11 @@ _Can the bot handle multiple meetings simultaneously?_
 
 Yes, the system is designed to scale and handle multiple meetings simultaneously
 
+
+_______________________________________
 Contribution Guide
+_______________________________________
+
 
 **_step 1_**
 
