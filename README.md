@@ -4,14 +4,6 @@ Table of Contents
 
 1. **Introduction**
 2. **Features**
-3. Architecture
-4. Technical Stack
-5. APIs and Integrations
-6. Setup and Installation
-7. Usage
-8. Development Guide
-9. Testing
-10. Deployment
 11. **Future Enhancements**
 12. **FAQs**
 
