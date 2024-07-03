@@ -34,9 +34,9 @@ Change to the repository directory on your computer (if you are not already ther
 **Make necessary changes and commit those changes**
 
 
-git add .
-git commit -m "what you did"
-git push origin
+``git add .``
+``git commit -m "what you did"``
+``git push origin``
 
 then go to the github repository which you have forked, go to pull request section above and raise a PR
 
