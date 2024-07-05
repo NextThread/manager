@@ -1,12 +1,15 @@
 import pyaudio
 import wave
-import speech_recognition as sr
+import whisper
+import certifi
+import ssl
+import urllib.request
 
 def record_audio(filename, duration):
-    chunk = 1024  # Record in chunks of 1024 samples
-    sample_format = pyaudio.paInt16  # 16 bits per sample
+    chunk = 102
+    sample_format = pyaudio.paInt16
     channels = 1
-    fs = 44100  # Record at 44100 samples per second
+    fs = 44100 
     p = pyaudio.PyAudio()
 
     print('Recording')
@@ -36,38 +39,32 @@ def record_audio(filename, duration):
     wf.writeframes(b''.join(frames))
     wf.close()
 
-def transcribe_audio(filename):
-    recognizer = sr.Recognizer()
-    audio_file = sr.AudioFile(filename)
+def transcribe_audio_with_whisper(filename):
+    context = ssl.create_default_context(cafile=certifi.where()) # ssl certi issue fix/ bypass
 
-    with audio_file as source:
-        audio_data = recognizer.record(source)
+    def patched_urlopen(*args, **kwargs):
+        kwargs['context'] = context
+        return original_urlopen(*args, **kwargs)
     
-    try:
-        text = recognizer.recognize_google(audio_data)
-        return text
-    except sr.UnknownValueError:
-        print("Google Speech Recognition could not understand the audio")
-        return ""
-    except sr.RequestError as e:
-        print(f"Could not request results from Google Speech Recognition service; {e}")
-        return ""
+    original_urlopen = urllib.request.urlopen
+    urllib.request.urlopen = patched_urlopen
+
+    model = whisper.load_model("base")
+    result = model.transcribe(filename)
+    return result["text"]
 
 def main():
     audio_filename = 'output.wav'
-    text_filename = 'output.txt'
-    duration = 10  # Duration of recording in seconds
+    text_filename = 'conversation.txt'
+    duration = 20 #fix it later, meeting duration
 
     record_audio(audio_filename, duration)
-    text = transcribe_audio(audio_filename)
+    text = transcribe_audio_with_whisper(audio_filename)
 
-    if text:
-        with open(text_filename, 'w') as f:
-            f.write(text)
-        print(f'Transcription saved to {text_filename}')
-    else:
-        print('No transcription available.')
+    with open(text_filename, 'w') as f:
+        f.write(text)
+
+    print(f'save donee {text_filename}')
 
 if __name__ == '__main__':
     main()
-
