@@ -1,5 +1,5 @@
-import pyaudio
 import wave
+import pyaudio
 import whisper
 import certifi
 import ssl
