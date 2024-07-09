@@ -21,7 +21,7 @@ _______________________________________
 
 _Meeting Integration_: Joins meetings on Google Meet, Skype, and Microsoft Teams.
 
-_Audio Capture_: Records audio from meetings.
+_Audio Capture_: Records audio from meetings......
 
 _Speech-to-Text Conversion_: Transcribes audio to text.
 
